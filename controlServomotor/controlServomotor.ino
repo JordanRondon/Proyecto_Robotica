@@ -14,7 +14,7 @@ const int servoGarraPIN = 6;
 
 char caracter;
 String datos;
-uint8_t servoBaseAngulo, servobrazo1Angulo, servobrazo2Angulo, servoGarraAngulo;
+uint8_t servoBaseAngulo, servobrazo1Angulo, servobrazo2Angulo = 180, servoGarraAngulo;
 int8_t indiceA, indiceB, indiceC, indiceD;
 
 void setup() {
@@ -28,7 +28,7 @@ void setup() {
 void loop() {
   obtener_datos_serial();
 
-  if(caracter == '\n') {
+  if (caracter == '\n') {
     obtener_Angulos();
     caracter = 0;
     datos = "";
@@ -41,9 +41,9 @@ void loop() {
 }
 
 void obtener_datos_serial() {
-  while(Serial.available() > 0) {
+  while (Serial.available() > 0) {
     caracter = Serial.read();
-    if(caracter == '\n') break;
+    if (caracter == '\n') break;
     else datos += caracter;
   }
 }
@@ -56,19 +56,19 @@ void obtener_Angulos() {
   indiceC = datos.indexOf("C");
   indiceD = datos.indexOf("D");
 
-  if(indiceA > -1) {
+  if (indiceA > -1) {
     str_servoBase = datos.substring(0, indiceA);
     servoBaseAngulo = str_servoBase.toInt();
   }
-  if(indiceB > -1) {
+  if (indiceB > -1) {
     str_servobrazo1 = datos.substring(0, indiceB);
     servobrazo1Angulo = str_servobrazo1.toInt();
   }
-  if(indiceC > -1) {
+  if (indiceC > -1) {
     str_servobrazo2 = datos.substring(0, indiceC);
     servobrazo2Angulo = str_servobrazo2.toInt();
   }
-  if(indiceD > -1) {
+  if (indiceD > -1) {
     str_servoGarra = datos.substring(0, indiceD);
     servoGarraAngulo = str_servoGarra.toInt();
   }
