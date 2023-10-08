@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +30,7 @@ namespace ControlRobot
             cmbVelocidad.SelectedIndex = 0;
             panelPosicionServo.Enabled = false;
             btnDesconectar.Enabled = false;
+            tkbBrazo2.Value = 180;
         }
 
         private void cargarValoresCmbVelocidad()
