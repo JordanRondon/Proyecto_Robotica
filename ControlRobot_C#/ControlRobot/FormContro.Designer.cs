@@ -37,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbVelocidad = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnConectar = new ControlRobot.Recursos.button.ButtonPersonalizado();
+            this.btnDesconectar = new ControlRobot.Recursos.button.ButtonPersonalizado();
             this.panelPosicionServo = new System.Windows.Forms.Panel();
             this.lbAnguloBase = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -59,8 +61,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tkbGarra = new System.Windows.Forms.TrackBar();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.btnConectar = new ControlRobot.Recursos.button.ButtonPersonalizado();
-            this.btnDesconectar = new ControlRobot.Recursos.button.ButtonPersonalizado();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelPuertoCOM.SuspendLayout();
@@ -144,6 +144,46 @@
             this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 24;
             this.label1.Text = "Puerto";
+            // 
+            // btnConectar
+            // 
+            this.btnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
+            this.btnConectar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
+            this.btnConectar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
+            this.btnConectar.BorderRadius = 20;
+            this.btnConectar.BorderSize = 0;
+            this.btnConectar.FlatAppearance.BorderSize = 0;
+            this.btnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConectar.ForeColor = System.Drawing.Color.White;
+            this.btnConectar.Location = new System.Drawing.Point(326, 21);
+            this.btnConectar.Name = "btnConectar";
+            this.btnConectar.Size = new System.Drawing.Size(156, 41);
+            this.btnConectar.TabIndex = 2;
+            this.btnConectar.Text = "Conectar";
+            this.btnConectar.TextColor = System.Drawing.Color.White;
+            this.btnConectar.UseVisualStyleBackColor = false;
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
+            // 
+            // btnDesconectar
+            // 
+            this.btnDesconectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
+            this.btnDesconectar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
+            this.btnDesconectar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
+            this.btnDesconectar.BorderRadius = 20;
+            this.btnDesconectar.BorderSize = 0;
+            this.btnDesconectar.FlatAppearance.BorderSize = 0;
+            this.btnDesconectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesconectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesconectar.ForeColor = System.Drawing.Color.White;
+            this.btnDesconectar.Location = new System.Drawing.Point(326, 72);
+            this.btnDesconectar.Name = "btnDesconectar";
+            this.btnDesconectar.Size = new System.Drawing.Size(156, 41);
+            this.btnDesconectar.TabIndex = 1;
+            this.btnDesconectar.Text = "Desconectar";
+            this.btnDesconectar.TextColor = System.Drawing.Color.White;
+            this.btnDesconectar.UseVisualStyleBackColor = false;
+            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
             // panelPosicionServo
             // 
@@ -387,46 +427,6 @@
             this.tkbGarra.TabIndex = 0;
             this.tkbGarra.Scroll += new System.EventHandler(this.tkbGarra_Scroll);
             // 
-            // btnConectar
-            // 
-            this.btnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
-            this.btnConectar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
-            this.btnConectar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
-            this.btnConectar.BorderRadius = 20;
-            this.btnConectar.BorderSize = 0;
-            this.btnConectar.FlatAppearance.BorderSize = 0;
-            this.btnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConectar.ForeColor = System.Drawing.Color.White;
-            this.btnConectar.Location = new System.Drawing.Point(326, 21);
-            this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(156, 41);
-            this.btnConectar.TabIndex = 2;
-            this.btnConectar.Text = "Conectar";
-            this.btnConectar.TextColor = System.Drawing.Color.White;
-            this.btnConectar.UseVisualStyleBackColor = false;
-            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
-            // 
-            // btnDesconectar
-            // 
-            this.btnDesconectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
-            this.btnDesconectar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
-            this.btnDesconectar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
-            this.btnDesconectar.BorderRadius = 20;
-            this.btnDesconectar.BorderSize = 0;
-            this.btnDesconectar.FlatAppearance.BorderSize = 0;
-            this.btnDesconectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesconectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesconectar.ForeColor = System.Drawing.Color.White;
-            this.btnDesconectar.Location = new System.Drawing.Point(326, 72);
-            this.btnDesconectar.Name = "btnDesconectar";
-            this.btnDesconectar.Size = new System.Drawing.Size(156, 41);
-            this.btnDesconectar.TabIndex = 1;
-            this.btnDesconectar.Text = "Desconectar";
-            this.btnDesconectar.TextColor = System.Drawing.Color.White;
-            this.btnDesconectar.UseVisualStyleBackColor = false;
-            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
-            // 
             // FormContro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,8 +435,10 @@
             this.Controls.Add(this.panelPosicionServo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.MaximumSize = new System.Drawing.Size(905, 604);
+            this.MinimumSize = new System.Drawing.Size(905, 604);
             this.Name = "FormContro";
-            this.Text = "FormContro";
+            this.Text = "Contro";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormContro_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
