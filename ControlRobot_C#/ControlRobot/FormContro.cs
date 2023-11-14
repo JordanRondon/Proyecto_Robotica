@@ -30,7 +30,6 @@ namespace ControlRobot
             cmbVelocidad.SelectedIndex = 0;
             panelPosicionServo.Enabled = false;
             btnDesconectar.Enabled = false;
-            tkbBrazo2.Value = 180;
         }
 
         private void cargarValoresCmbVelocidad()
@@ -142,6 +141,13 @@ namespace ControlRobot
 
             if (serialPort1.IsOpen)
             {
+                angulo = 180 - angulo;
+                /*
+                 * Invertimos los valores
+                 * angulo = 180 - 180 -> 0
+                 * angulo = 180 - 90  -> 90
+                 * angulo = 180 - 0   -> 180
+                 */
                 serialPort1.Write(angulo + "C" + "\n");
             }
         }
